@@ -1,0 +1,57 @@
+// Mixins
+
+@use 'variables' as *;
+
+// Flexbox utilities
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin flex-between {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+// Hover effect
+@mixin hover-lift {
+  transition: transform $transition-base, box-shadow $transition-base;
+  
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: $shadow-lg;
+  }
+}
+
+// Button reset
+@mixin button-reset {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  font-family: inherit;
+}
+
+// Card base
+@mixin card-base {
+  background-color: $bg-color;
+  border-radius: $border-radius-md;
+  box-shadow: $shadow-sm;
+  padding: $spacing-lg;
+  transition: box-shadow $transition-base;
+}
+
+// Text truncate
+@mixin text-truncate {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+

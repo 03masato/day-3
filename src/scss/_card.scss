@@ -1,0 +1,65 @@
+// Card component
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.card {
+  @include card-base;
+  
+  &__header {
+    padding-bottom: $spacing-md;
+    margin-bottom: $spacing-md;
+    border-bottom: $border-width solid $border-color;
+  }
+  
+  &__title {
+    margin: 0;
+    font-size: $font-size-xl;
+    font-weight: $font-weight-bold;
+    color: $text-color;
+  }
+  
+  &__subtitle {
+    margin: $spacing-xs 0 0 0;
+    font-size: $font-size-sm;
+    color: $text-muted;
+  }
+  
+  &__body {
+    color: $text-color;
+    
+    p {
+      margin: 0 0 $spacing-md 0;
+      
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+  
+  &__footer {
+    padding-top: $spacing-md;
+    margin-top: $spacing-md;
+    border-top: $border-width solid $border-color;
+    @include flex-between;
+  }
+  
+  &:hover {
+    box-shadow: $shadow-md;
+  }
+  
+  // Variants
+  &--elevated {
+    box-shadow: $shadow-md;
+    
+    &:hover {
+      box-shadow: $shadow-lg;
+    }
+  }
+  
+  &--outlined {
+    box-shadow: none;
+    border: $border-width solid $border-color;
+  }
+}
+

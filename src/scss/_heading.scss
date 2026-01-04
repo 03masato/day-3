@@ -1,0 +1,62 @@
+// Heading component
+
+@use 'variables' as *;
+@use 'mixins' as *;
+
+.heading {
+  margin: 0;
+  font-family: $font-family-base;
+  font-weight: $font-weight-bold;
+  line-height: 1.2;
+  color: $text-color;
+  
+  // Levels
+  &--h1 {
+    font-size: $font-size-3xl;
+    margin-bottom: $spacing-lg;
+  }
+  
+  &--h2 {
+    font-size: $font-size-2xl;
+    margin-bottom: $spacing-md;
+  }
+  
+  &--h3 {
+    font-size: $font-size-xl;
+    margin-bottom: $spacing-md;
+  }
+  
+  &--h4 {
+    font-size: $font-size-lg;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &--h5 {
+    font-size: $font-size-base;
+    margin-bottom: $spacing-sm;
+  }
+  
+  &--h6 {
+    font-size: $font-size-sm;
+    margin-bottom: $spacing-sm;
+  }
+  
+  // Variants
+  &--muted {
+    color: $text-muted;
+  }
+  
+  &--primary {
+    color: $primary-color;
+  }
+  
+  &--center {
+    text-align: center;
+  }
+  
+  &--underline {
+    padding-bottom: $spacing-sm;
+    border-bottom: 2px solid $border-color;
+  }
+}
+
